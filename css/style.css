@@ -1,0 +1,29 @@
+/* 全体共通 */
+
+
+html {
+  font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+
+body {
+  color: black;
+}
+
+header {
+  width: 100%;
+  display: flex;
+}
+
+.header-logo {
+  width: 50%;
+}
+
+
+.header-menus {
+  width: 50%;
+  text-align: right;
+}
