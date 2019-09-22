@@ -26,8 +26,8 @@
 
     <main>
 
-
-
+        <p>規約</p>
+        <p id="login" style="cursor:pointer;">同意して登録します</p>
 
 
     </main>
@@ -45,6 +45,10 @@
 
         $("#config").on("click", function () {
             window.location.href = '../config/list.html';
+        });
+
+        $("#login").on("click", function () {
+            window.location.href = '../user/new.html';
         });
 
 

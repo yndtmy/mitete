@@ -38,8 +38,15 @@
                 <div>
                     <p>パスワード再入力：<input type="password2" name="password2"></p>
                 </div>
-                <input type="submit" value="規約に同意して登録">
 
+                <div class="">
+                    <p id="terms" style="cursor:pointer;">こちらの規約をご確認の上ご登録くださいませ</p>
+                </div>
+
+
+                <div>
+                    <input type="submit" value="規約に同意して登録">
+                </div>
             </form>
 
         </div>
@@ -67,6 +74,10 @@
 
         $("#login").on("click", function () {
             window.location.href = '../user/main.html';
+        });
+
+        $("#terms").on("click", function () {
+            window.location.href = '../user/terms.html';
         });
 
 

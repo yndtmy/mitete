@@ -25,11 +25,30 @@
     </header>
 
     <main>
+        <div>
+            <p>イベント入力画面</p>
 
+            <form action="../main/list.html" method="post">
 
-
-
-
+                <label>タイトル：<input type="text" name="title"></label>
+                <br>
+                <label><input type="file" accept="image/png, image/jpeg"></label>
+                <br>
+                <label>日付：<input type="date" name="date"></label>
+                <br>
+                <label>時間：<input type="time" name="time"></label>
+                <br>
+                <label>会場：<input type="text" name="address"></label>
+                <br>
+                <label>料金：<input type="text" name="price"></label>
+                <br>
+                <label>説明：<textarea name="event_text" id="" cols="30" rows="10"></textarea></label>
+                <div>
+                    <input type="reset" value="リセット">
+                    <input type="submit" value="送信する">
+                </div>
+            </form>
+        </div>
     </main>
 
 

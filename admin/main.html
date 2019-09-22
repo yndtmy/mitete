@@ -26,9 +26,13 @@
 
     <main>
 
-
-
-
+        <p>管理者用ページ</p>
+        <div class="">
+            <p id="event" style="cursor:pointer;">イベント登録</p>
+        </div>
+        <div class="">
+            <p id="article" style="cursor:pointer;">コラム登録</p>
+        </div>
 
     </main>
 
@@ -45,6 +49,14 @@
 
         $("#config").on("click", function () {
             window.location.href = '../config/list.html';
+        });
+
+
+        $("#event").on("click", function () {
+            window.location.href = '../admin/event_new.html';
+        });
+        $("#article").on("click", function () {
+            window.location.href = '../admin/article_new.html';
         });
 
 
