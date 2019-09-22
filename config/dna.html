@@ -16,10 +16,10 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo">mitete</p>
+            <p id="logo" style="cursor:pointer;">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config">設定</p>
+            <p id="config" style="cursor:pointer;">設定</p>
         </div>
 
     </header>
@@ -34,6 +34,7 @@
             <div class="gakusyu">
                 <label for="BDNF">BDNF</label>
                 <select name="BDNF">
+                    <option id="BDNF" value="">-</option>
                     <option id="BDNF" value="BDNF_GG">GG</option>
                     <option id="BDNF" value="BDNF_AG">AG</option>
                     <option id="BDNF" value="BDNF_AA">AA</option>
@@ -41,6 +42,7 @@
 
                 <label for="SNAP25">SNAP25</label>
                 <select name="SNAP25">
+                    <option id="SNAP25" value="">-</option>
                     <option id="SNAP25" value="SNAP25_GG">GG</option>
                     <option id="SNAP25" value="SNAP25_AG">AG</option>
                     <option id="SNAP25" value="SNAP25_AA">AA</option>
@@ -48,6 +50,7 @@
 
                 <label for="CHRM2">CHRM2</label>
                 <select name="CHRM2">
+                    <option id="CHRM2" value="">-</option>
                     <option id="CHRM2" value="CHRM2_GG">TT</option>
                     <option id="CHRM2" value="CHRM2_AG">AT</option>
                     <option id="CHRM2" value="CHRM2_AA">AA</option>
@@ -58,6 +61,7 @@
             <div class="shintai">
                 <label for="ACE">ACE</label>
                 <select name="ACE">
+                    <option id="ACE" value="">-</option>
                     <option id="ACE" value="ACE_II">II</option>
                     <option id="ACE" value="ACE_ID">ID</option>
                     <option id="ACE" value="ACE_DD">DD</option>
@@ -65,6 +69,7 @@
 
                 <label for="ACTN3">ACTN3</label>
                 <select name="ACTN3">
+                    <option id="ACTN3" value="">-</option>
                     <option id="ACTN3" value="ACTN3_TT">TT</option>
                     <option id="ACTN3" value="ACTN3_CT">CT</option>
                     <option id="ACTN3" value="ACTN3_CC">CC</option>
@@ -72,6 +77,7 @@
 
                 <label for="mtDNA">mtDNA</label>
                 <select name="mtDNA">
+                    <option id="mtDNA" value="">-</option>
                     <option id="mtDNA" value="mtDNA_TT">TT</option>
                     <option id="mtDNA" value="mtDNA_CT">CT</option>
                     <option id="mtDNA" value="mtDNA_CC">CC</option>
@@ -81,6 +87,7 @@
             <div class="kansei">
                 <label for="COMT">COMT</label>
                 <select name="COMT">
+                    <option id="COMT" value="">-</option>
                     <option id="COMT" value="COMT_GG">GG</option>
                     <option id="COMT" value="COMT_AG">AG</option>
                     <option id="COMT" value="COMT_AA">AA</option>
@@ -88,6 +95,7 @@
 
                 <label for="CHRNA4">CHRNA4</label>
                 <select name="CHRNA4">
+                    <option id="CHRNA4" value="">-</option>
                     <option id="CHRNA4" value="CHRNA4_CC+GG">CC+GG</option>
                     <option id="CHRNA4" value="CHRNA4_CC+AG">CC+AG</option>
                     <option id="CHRNA4" value="CHRNA4_CC+AA">CC+AA</option>
@@ -101,12 +109,14 @@
 
                 <label for="5-HTT">CHRM2</label>
                 <select name="5-HTT">
+                    <option id="5-HTT" value="">-</option>
                     <option id="5-HTT" value="5-HTT_SS">SS</option>
                     <option id="5-HTT" value="5-HTT_SL">SL</option>
                     <option id="5-HTT" value="5-HTT_LL">LL</option>
                 </select>
             </div>
 
+            <input type="reset" value="リセット">
             <input type="submit" value="送信する">
         </form>
 

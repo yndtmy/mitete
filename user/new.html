@@ -16,10 +16,10 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo">mitete</p>
+            <p id="logo" style="cursor:pointer;">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config">設定</p>
+            <p id="config" style="cursor:pointer;">設定</p>
         </div>
 
     </header>
@@ -29,25 +29,24 @@
 
         <div class="form_box">
             <form action="../main/list.html" method="post">
-
-                <div class="">
-                    <label for="rendou">名前：</label>
-                    <input id="rendou" type="text" name="name">
+                <div>
+                    <p>メールアドレス：<input type="mail" name="mail"></p>
                 </div>
-
-                <div class="">
-                    <label for="mail">メール：</label>
-                    <input id="mail" type="email" name="mail">
+                <div>
+                    <p>パスワード：<input type="password" name="password"></p>
                 </div>
-
-
+                <div>
+                    <p>パスワード再入力：<input type="password2" name="password2"></p>
+                </div>
+                <input type="submit" value="規約に同意して登録">
 
             </form>
 
         </div>
-
-
-
+        <div>
+            <p>すでにアカウントをお持ちの方はこちらから</p>
+            <input id="login" type="submit" value="ログイン">
+        </div>
 
     </main>
 
@@ -64,6 +63,10 @@
 
         $("#config").on("click", function () {
             window.location.href = '../config/list.html';
+        });
+
+        $("#login").on("click", function () {
+            window.location.href = '../user/main.html';
         });
 
 

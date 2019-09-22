@@ -16,17 +16,20 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo">mitete</p>
+            <p id="logo" style="cursor:pointer;">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config">設定</p>
+            <p id="config" style="cursor:pointer;">設定</p>
         </div>
 
     </header>
 
     <main>
 
-
+        <p id="profile" style="cursor:pointer;">プロフィールの変更・追加</p>
+        <p id="dna" style="cursor:pointer;">遺伝子検査結果</p>
+        <p id="event" style="cursor:pointer;">参加予定イベント</p>
+        <p id="logout" style="cursor:pointer;">ログアウト</p>
 
 
 
@@ -38,15 +41,32 @@
     <script>
 
 
-        // ページの移動
+        // ロゴクリックのメインページへ移動
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
         });
-
+        // 設定画面への移動
         $("#config").on("click", function () {
             window.location.href = '../config/list.html';
         });
 
+
+        // プロフィール変更・追加
+        $("#profile").on("click", function () {
+            window.location.href = '../config/profile.html';
+        });
+        // 遺伝子検査結果入力のページ
+        $("#dna").on("click", function () {
+            window.location.href = '../config/dna.html';
+        });
+        // 参加予定イベント
+        $("#event").on("click", function () {
+            window.location.href = '../config/event.html';
+        });
+        // ログアウト
+        $("#logout").on("click", function () {
+            window.location.href = '../user/main.html';
+        });
 
     </script>
 

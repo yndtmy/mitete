@@ -16,19 +16,18 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo">mitete</p>
+            <p id="logo" style="cursor:pointer;">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config">設定</p>
+            <p id="config" style="cursor:pointer;">設定</p>
         </div>
 
     </header>
 
     <main>
 
-
-
-
+        <p>遺伝子検査結果の入力が無事完了いたしました。</p>
+        <p id="top" style="cursor:pointer;">トップページに戻る</p>
 
     </main>
 
@@ -45,6 +44,10 @@
 
         $("#config").on("click", function () {
             window.location.href = '../config/list.html';
+        });
+
+        $("#top").on("click", function () {
+            window.location.href = '../main/list.html';
         });
 
 
