@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mitete</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-logo">
+            <p id="logo">mitete</p>
+        </div>
+
+    </header>
+    <div id="firebaseui-auth-container"></div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
+    <script src="firebase.js"></script>
+    <script>
+
+        var uiConfig = {
+            // ログイン完了時のリダイレクト先
+            signInSuccessUrl: 'https://yndtmy.github.io/mitete/main/list',
+
+            // 利用する認証機能
+            signInOptions: [
+                firebase.auth.EmailAuthProvider.PROVIDER_ID  //メール認証
+            ],
+
+            // 利用規約
+            tosUrl: 'https://yndtmy.github.io/mitete/user/terms',
+            // プライバシーポリシー
+            privacyPolicyUrl: 'https://yndtmy.github.io/mitete/user/privacy'
+        };
+
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+</body>
+
+</html>
