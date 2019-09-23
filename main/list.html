@@ -23,10 +23,7 @@
 
     </header>
 
-
-
-    <h1>...ちょっと待ってください</h1>
-    <div id="info"></div>
+    <p>メインページ</p>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
@@ -37,7 +34,6 @@
             let info = document.querySelector('#info');
 
             if (user) {
-                h1.innerText = 'Login Complete!';
                 info.innerHTML = `${user.displayName}さんこんにちは`;
                 console.log(user);
             }
