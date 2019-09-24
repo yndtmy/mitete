@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mitete</title>
+    <title>mitete</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
-
 
 <body>
 
@@ -24,38 +22,134 @@
 
     </header>
 
-    <main>
-        <div>
-            <p>イベント入力画面</p>
 
-            <form action="../main/list.html" method="post">
-
-                <label>タイトル：<input type="text" name="title"></label>
-                <br>
-                <label><input type="file" accept="image/png, image/jpeg"></label>
-                <br>
-                <label>日付：<input type="date" name="date"></label>
-                <br>
-                <label>時間：<input type="time" name="time"></label>
-                <br>
-                <label>会場：<input type="text" name="address"></label>
-                <br>
-                <label>料金：<input type="text" name="price"></label>
-                <br>
-                <label>説明：<textarea name="event_text" id="" cols="30" rows="10"></textarea></label>
-                <div>
-                    <input type="reset" value="リセット">
-                    <input type="submit" value="送信する">
-                </div>
-            </form>
+    <!-- 入力&出力場所を作成しよう -->
+    <div>
+        <div>イベント名<input type="text" id='event_title'>
         </div>
-    </main>
+
+        <div>日付<input type="date" id='event_date'>
+        </div>
+
+        <div>時間<input type="time" id='event_time'>
+        </div>
+
+        <div>会場<input type="text" id='event_place'>
+        </div>
+
+        <div>参加費<input type="text" id='event_money'>
+        </div>
+
+    </div>
+    <!-- <div>
+        遺伝子検査
+        
+        <div class="gakusyu">
+            <label for="BDNF">BDNF</label>
+            <select name="BDNF">
+                <option id="BDNF" value="">-</option>
+                <option id="BDNF" value="BDNF_GG">GG</option>
+                <option id="BDNF" value="BDNF_AG">AG</option>
+                <option id="BDNF" value="BDNF_AA">AA</option>
+            </select>
+
+            <label for="SNAP25">SNAP25</label>
+            <select name="SNAP25">
+                <option id="SNAP25" value="">-</option>
+                <option id="SNAP25" value="SNAP25_GG">GG</option>
+                <option id="SNAP25" value="SNAP25_AG">AG</option>
+                <option id="SNAP25" value="SNAP25_AA">AA</option>
+            </select>
+
+            <label for="CHRM2">CHRM2</label>
+            <select name="CHRM2">
+                <option id="CHRM2" value="">-</option>
+                <option id="CHRM2" value="CHRM2_GG">TT</option>
+                <option id="CHRM2" value="CHRM2_AG">AT</option>
+                <option id="CHRM2" value="CHRM2_AA">AA</option>
+            </select>
+        </div>
+
+       
+        <div class="shintai">
+            <label for="ACE">ACE</label>
+            <select name="ACE">
+                <option id="ACE" value="">-</option>
+                <option id="ACE" value="ACE_II">II</option>
+                <option id="ACE" value="ACE_ID">ID</option>
+                <option id="ACE" value="ACE_DD">DD</option>
+            </select>
+
+            <label for="ACTN3">ACTN3</label>
+            <select name="ACTN3">
+                <option id="ACTN3" value="">-</option>
+                <option id="ACTN3" value="ACTN3_TT">TT</option>
+                <option id="ACTN3" value="ACTN3_CT">CT</option>
+                <option id="ACTN3" value="ACTN3_CC">CC</option>
+            </select>
+
+            <label for="mtDNA">mtDNA</label>
+            <select name="mtDNA">
+                <option id="mtDNA" value="">-</option>
+                <option id="mtDNA" value="mtDNA_TT">TT</option>
+                <option id="mtDNA" value="mtDNA_CT">CT</option>
+                <option id="mtDNA" value="mtDNA_CC">CC</option>
+            </select>
+        </div>
+
+        <div class="kansei">
+            <label for="COMT">COMT</label>
+            <select name="COMT">
+                <option id="COMT" value="">-</option>
+                <option id="COMT" value="COMT_GG">GG</option>
+                <option id="COMT" value="COMT_AG">AG</option>
+                <option id="COMT" value="COMT_AA">AA</option>
+            </select>
+
+            <label for="CHRNA4">CHRNA4</label>
+            <select name="CHRNA4">
+                <option id="CHRNA4" value="">-</option>
+                <option id="CHRNA4" value="CHRNA4_CC+GG">CC+GG</option>
+                <option id="CHRNA4" value="CHRNA4_CC+AG">CC+AG</option>
+                <option id="CHRNA4" value="CHRNA4_CC+AA">CC+AA</option>
+                <option id="CHRNA4" value="CHRNA4_CT+GG">CT+GG</option>
+                <option id="CHRNA4" value="CHRNA4_CT+AG">CT+AG</option>
+                <option id="CHRNA4" value="CHRNA4_CT+AA">CT+AA</option>
+                <option id="CHRNA4" value="CHRNA4_TT+GG">TT+GG</option>
+                <option id="CHRNA4" value="CHRNA4_TT+AG">TT+AG</option>
+                <option id="CHRNA4" value="CHRNA4_TT+AA">TT+AA</option>
+            </select>
+
+            <label for="5-HTT">CHRM2</label>
+            <select name="5-HTT">
+                <option id="5-HTT" value="">-</option>
+                <option id="5-HTT" value="5-HTT_SS">SS</option>
+                <option id="5-HTT" value="5-HTT_SL">SL</option>
+                <option id="5-HTT" value="5-HTT_LL">LL</option>
+            </select>
+        </div>
+    </div> -->
+    <div>
+        <textarea name="" id="event_text" cols="30" rows="10"></textarea>
+        <button id='event_send'>投稿</button>
+    </div>
 
 
-    <!-- ここらかscript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="../firebase2.js">
+        //メッセージの送受信準備
+        var newPostRef = firebase.database().ref();//データベースのどこに入れるかを決める
+    </script>
+
+
     <script>
-
 
         // ページの移動
         $("#logo").on("click", function () {
@@ -67,8 +161,30 @@
         });
 
 
-    </script>
 
+        // 送信ボタンクリックでメッセージ送信
+        $('#event_send').on('click', function () {
+            newPostRef.push({
+                name: $('#event_title').val(),
+                date: $('#event_date').val(),
+                time: $('#event_time').val(),
+                text: $('#event_place').val(),
+                text: $('#event_money').val(),
+                text: $('#event_text').val()
+            });
+            $('#event_title').val('');
+            $('#event_date').val('');
+            $('#event_time').val('');
+            $('#event_place').val('');
+            $('#event_money').val('');
+            $('#event_text').val('');
+            alert("投稿が完了いたしました")
+        });
+
+
+
+
+    </script>
 
 </body>
 

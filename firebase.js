@@ -10,3 +10,6 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+//メッセージの送受信準備
+var newPostRef = firebase.database().ref();//データベースのどこに入れるかを決める
