@@ -1,0 +1,20 @@
+
+
+
+/* main --------------------------------------------*/
+
+/* list囲み */
+.list_box {
+    padding: 20px 20px;
+    margin: 50px;
+  border: 2px solid #aaa;
+    color: rgb(58, 58, 58);/*文字色*/
+    background: #FFF;
+  border: 2px solid #aaa;
+    border: solid 1px rgb(58, 58, 58);/*線*/
+    border-radius: 5px;/*角の丸み*/
+}
+.list_box p {
+    margin: 0; 
+    padding: 0;
+}

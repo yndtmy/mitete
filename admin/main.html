@@ -16,12 +16,12 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo" style="cursor:pointer;">mitete</p>
+            <p id="logo" style="cursor:pointer">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config" style="cursor:pointer;">設定</p>
+            <a href="../config/list.html"><img class="config" id="config" src="../img/config.png" style="cursor:pointer"
+                    alt="" /></a>
         </div>
-
     </header>
 
     <main>
@@ -33,6 +33,8 @@
         <div class="">
             <p id="article" style="cursor:pointer;">コラム登録</p>
         </div>
+
+        <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
 
     </main>
 
@@ -46,11 +48,6 @@
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
         });
-
-        $("#config").on("click", function () {
-            window.location.href = '../config/list.html';
-        });
-
 
         $("#event").on("click", function () {
             window.location.href = '../admin/event_new.html';

@@ -14,30 +14,30 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo" style="cursor:pointer;">mitete</p>
+            <p id="logo" style="cursor:pointer">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config" style="cursor:pointer;">設定</p>
+            <a href="../config/list.html"><img class="config" id="config" src="../img/config.png" style="cursor:pointer"
+                    alt="" /></a>
         </div>
-
     </header>
 
 
     <!-- 入力&出力場所を作成しよう -->
     <div>
-        <div>イベント名<input type="text" id='event_title'>
+        <div>イベント名：<input type="text" id='event_title'>
         </div>
 
-        <div>日付<input type="date" id='event_date'>
+        <div>日付：<input type="date" id='event_date'>
         </div>
 
-        <div>時間<input type="time" id='event_time'>
+        <div>時間：<input type="time" id='event_time'>
         </div>
 
-        <div>会場<input type="text" id='event_place'>
+        <div>会場：<input type="text" id='event_place'>
         </div>
 
-        <div>参加費<input type="text" id='event_money'>
+        <div>参加費：<input type="text" id='event_money'>
         </div>
 
     </div>
@@ -134,6 +134,9 @@
         <button id='event_send'>投稿</button>
     </div>
 
+    <a href="../admin/main.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
+    <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
+
 
     </div>
 
@@ -155,11 +158,6 @@
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
         });
-
-        $("#config").on("click", function () {
-            window.location.href = '../config/list.html';
-        });
-
 
 
         // 送信ボタンクリックでメッセージ送信

@@ -16,12 +16,12 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo" style="cursor:pointer;">mitete</p>
+            <p id="logo" style="cursor:pointer">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config" style="cursor:pointer;">設定</p>
+            <a href="../config/list.html"><img class="config" id="config" src="../img/config.png" style="cursor:pointer"
+                    alt="" /></a>
         </div>
-
     </header>
 
     <main>
@@ -31,6 +31,8 @@
         <p id="event" style="cursor:pointer;">参加予定イベント</p>
         <p id="logout" style="cursor:pointer;">ログアウト</p>
 
+        <a href="../main/list.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
+        <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
 
 
     </main>
@@ -44,10 +46,6 @@
         // ロゴクリックのメインページへ移動
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
-        });
-        // 設定画面への移動
-        $("#config").on("click", function () {
-            window.location.href = '../config/list.html';
         });
 
 

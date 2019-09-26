@@ -16,37 +16,30 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo" style="cursor:pointer;">mitete</p>
+            <p id="logo">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config" style="cursor:pointer;">設定</p>
+            <a href="../config/list.html"></a><img class="config" id="config" src="../img/config.png"
+                style="cursor:pointer" alt="" /></a>
         </div>
-
     </header>
 
     <main>
 
         <p>遺伝子検査結果の入力が無事完了いたしました。</p>
-        <p id="top" style="cursor:pointer;">トップページに戻る</p>
+        <a href="../config/dna.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
+        <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
 
     </main>
 
 
     <!-- ここらかscript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
     <script>
 
 
         // ページの移動
         $("#logo").on("click", function () {
-            window.location.href = '../main/list.html';
-        });
-
-        $("#config").on("click", function () {
-            window.location.href = '../config/list.html';
-        });
-
-        $("#top").on("click", function () {
             window.location.href = '../main/list.html';
         });
 

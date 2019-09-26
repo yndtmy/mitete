@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mitete</title>
+    <title>mitete</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/user.css">
 </head>
@@ -16,19 +16,20 @@
 
     <header>
         <div class="header-logo">
-            <p id="logo" style="cursor:pointer;">mitete</p>
+            <p id="logo" style="cursor:pointer">mitete</p>
         </div>
         <div class="header-menus">
-            <p id="config" style="cursor:pointer;">設定</p>
+            <a href="../config/list.html"><img class="config" id="config" src="../img/config.png" style="cursor:pointer"
+                    alt="" /></a>
         </div>
-
     </header>
+
 
     <main>
 
         <p>無事イベントキャンセルが完了いたしました。</p>
-        <p id="top" style="cursor:pointer;">トップページに戻る</p>
-
+        <a href="../config/event.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
+        <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
 
 
     </main>
@@ -43,15 +44,6 @@
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
         });
-
-        $("#config").on("click", function () {
-            window.location.href = '../config/list.html';
-        });
-
-        $("#top").on("click", function () {
-            window.location.href = '../main/list.html';
-        });
-
 
     </script>
 
