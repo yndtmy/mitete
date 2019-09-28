@@ -15,7 +15,7 @@ var otherProjectfirebaseConfig = {
     authDomain: "mitete-3804a.firebaseapp.com",
     databaseURL: "https://mitete-3804a.firebaseio.com",
     projectId: "mitete-3804a",
-    storageBucket: "mitete-3804a.appspot.com",
+    storageBucket: "",
     messagingSenderId: "788696255230",
     appId: "1:788696255230:web:0c27816d405215e7c373af"
 };
