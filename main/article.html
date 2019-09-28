@@ -26,6 +26,9 @@
 
     <main>
 
+        <div>
+            <div id='article_output'></div>
+        </div>
 
         <a href="../main/list.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
         <a href="../main/list.html"><img class="icon" src="../img/home.png" style="cursor:pointer" alt="" /></a>
@@ -35,13 +38,32 @@
 
 
     <!-- ここらかscript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="../firebase.js"></script>
     <script>
-
 
         // ページの移動
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
+        });
+
+
+        //コラム メッセージが追加されたら自動的に表示
+        newPostRef.on('child_added', function (article_data) {
+            var article_k = article_data.key; //kを指定
+            var article_v = article_data.val(); //vを指定
+
+            var article_str = '';//varに下記3行が入る
+            article_str += `<div id=${article_k} class="line_box">`;//必ず必要
+            article_str += `<p>${article_v.article_title}</p>`;//名前を表示する //変数がはいるときだけ``
+            article_str += `<p>${article_v.article_text}</p>`;
+            article_str += '</div>';//必ず必要
+
+            $('#article_output').append(article_str);
+
         });
 
 

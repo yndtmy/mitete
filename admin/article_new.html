@@ -22,15 +22,13 @@
         </div>
     </header>
 
-
-    <!-- 入力&出力場所を作成しよう -->
     <div>
-        <div>タイトル<input type="text" id='article_title'>
+        <div>タイトル<input type="text" name="article_title" id='article_title'>
         </div>
 
         <div>
-            <textarea name="" id="article_text" cols="30" rows="10"></textarea>
-            <button id='send'>投稿</button>
+            <textarea name="article_text" id="article_text" cols="30" rows="10"></textarea>
+            <button id='article_send'>投稿</button>
         </div>
 
         <a href="../admin/main.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
@@ -45,10 +43,7 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-    <script src="../firebase.js">
-        //メッセージの送受信準備
-        var newPostRef = firebase.database().ref();//データベースのどこに入れるかを決める
-    </script>
+    <script src="../firebase.js"></script>
 
 
     <script>
@@ -61,10 +56,10 @@
 
 
         // 送信ボタンクリックでメッセージ送信
-        $('#send').on('click', function () {
+        $('#article_send').on('click', function () {
             newPostRef.push({
-                name: $('#article_title').val(),//タイトルを持ってくる
-                text: $('#article_text').val()//textを持ってくる
+                article_title: $('#article_title').val(),//タイトルを持ってくる
+                article_text: $('#article_text').val()//textを持ってくる
             });
             $('#article_title').val('');//タイトルの中身を消去
             $('#article_text').val('');//テキストの中身を消去

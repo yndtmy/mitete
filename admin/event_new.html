@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/user.css">
 </head>
 
+
 <body>
 
     <header>
@@ -25,19 +26,19 @@
 
     <!-- 入力&出力場所を作成しよう -->
     <div>
-        <div>イベント名：<input type="text" id='event_title'>
+        <div>イベント名：<input type="text" name="event_title" id='event_title'>
         </div>
 
-        <div>日付：<input type="date" id='event_date'>
+        <div>日付：<input type="date" name="event_date" id='event_date'>
         </div>
 
-        <div>時間：<input type="time" id='event_time'>
+        <div>時間：<input type="time" name="event_time" id='event_time'>
         </div>
 
-        <div>会場：<input type="text" id='event_place'>
+        <div>会場：<input type="text" name="event_place" id='event_place'>
         </div>
 
-        <div>参加費：<input type="text" id='event_money'>
+        <div>参加費：<input type="text" name="event_money" id='event_money'>
         </div>
 
     </div>
@@ -146,10 +147,8 @@
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-    <script src="../firebase2.js">
-        //メッセージの送受信準備
-        var newPostRef = firebase.database().ref();//データベースのどこに入れるかを決める
-    </script>
+    <script src="../firebase.js"></script>
+
 
 
     <script>
@@ -160,17 +159,19 @@
         });
 
 
+
         // 送信ボタンクリックでメッセージ送信
         $('#event_send').on('click', function () {
-            newPostRef.push({
-                name: $('#event_title').val(),
-                date: $('#event_date').val(),
-                time: $('#event_time').val(),
-                text: $('#event_place').val(),
-                text: $('#event_money').val(),
-                text: $('#event_text').val()
+            newPostRef2.push({
+                // event_id: $('#event_id').val(),
+                event_title: $('#event_title').val(),
+                event_date: $('#event_date').val(),
+                event_time: $('#event_time').val(),
+                event_place: $('#event_place').val(),
+                event_money: $('#event_money').val(),
+                event_text: $('#event_text').val()
             });
-            $('#event_title').val('');
+            $('#event_title').val('');//消す
             $('#event_date').val('');
             $('#event_time').val('');
             $('#event_place').val('');
@@ -178,6 +179,7 @@
             $('#event_text').val('');
             alert("投稿が完了いたしました")
         });
+
 
 
 

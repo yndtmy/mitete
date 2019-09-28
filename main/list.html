@@ -26,71 +26,81 @@
     <main>
 
         <div>
-            <div class="list_box">
-                <div id='event_output'></div>
+            <div>
+                <div id='event_output' style="cursor:pointer"></div>
             </div>
-            <div class="list_box">
-                <div id='article_output'></div>
+
+            <div>
+                <div id='article_output' style="cursor:pointer"></div>
             </div>
         </div>
 
     </main>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
-    <script src="../firebase.js">
-        //メッセージの送受信準備
-        var newPostRef = firebase.database().ref();//データベースのどこに入れるかを決める
-    </script>
-
-
+    <script src="../firebase.js"></script>
     <script>
-
         // ページの移動
         $("#logo").on("click", function () {
             window.location.href = '../main/list.html';
         });
 
-
-        //コラム メッセージが追加されたら自動的に表示
-        newPostRef.on('child_added', function (data) {//いつもは"click"のやつ
-            var k = data.key; //kを指定
-            var v = data.val(); //vを指定
-
-            var str = '';//varに下記3行が入る
-            str += `<div id=${k}>`;//必ず必要
-            str += `<p>${v.name}</p>`;//名前を表示する //変数がはいるときだけ``
-            str += `<p>${v.text}</p>`;
-            str += '</div>';//必ず必要
-
-            $('#article_output').append(str);
-
+        // イベント詳細ページの移動
+        $("#event_output").on("click", function () {
+            window.location.href = '../main/event.html';
         });
+
+        // コラム詳細ページの移動
+        $("#article_output").on("click", function () {
+            window.location.href = '../main/article.html';
+        });
+
+    </script>
+    <script>
 
         //イベント メッセージが追加されたら自動的に表示
-        newPostRef.on('child_added', function (data) {//いつもは"click"のやつ
-            var k = data.key; //kを指定
-            var v = data.val(); //vを指定
+        newPostRef2.on('child_added', function (event_data) {
+            var event_k = event_data.key; //kを指定
+            var event_v = event_data.val(); //vを指定
 
-            var str = '';
-            str += `<div id=${k}>`;//必ず必要
-            str += `<p>${v.name}</p>`;//名前を表示する //変数がはいるときだけ``
-            str += `<p>${v.date}</p>`;
-            str += `<p>${v.time}</p>`;
-            str += `<p>${v.text}</p>`;
-            str += `<p>${v.text}</p>`;
-            str += `<p>${v.text}</p>`;
-            str += '</div>';//必ず必要
+            var event_str = '';
+            event_str += `<div id=${event_k} class="line_box">`;//必ず必要
+            event_str += `<p>${event_v.event_title}</p>`;//名前を表示する //変数がはいるときだけ``
+            event_str += '</div>';//必ず必要
 
-            $('#event_output').append(str);
+            $('#event_output').append(event_str);
 
         });
-
 
 
     </script>
+
+    <script>
+
+
+
+        //コラム メッセージが追加されたら自動的に表示
+        newPostRef.on('child_added', function (article_data) {
+            var article_k = article_data.key; //kを指定
+            var article_v = article_data.val(); //vを指定
+
+            var article_str = '';//varに下記3行が入る
+            article_str += `<div id=${article_k} class="line_box">`;//必ず必要
+            article_str += `<p>${article_v.article_title}</p>`;//名前を表示する //変数がはいるときだけ``
+            article_str += '</div>';//必ず必要
+
+            $('#article_output').append(article_str);
+
+        });
+
+    </script>
+
+
+
 
 </body>
 

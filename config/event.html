@@ -26,6 +26,9 @@
 
     <main>
 
+        <div>
+            <div id='event_output'></div>
+        </div>
 
 
         <a href="../config/list.html"><img class="icon" src="../img/back.png" style="cursor:pointer" alt="" /></a>
@@ -34,8 +37,38 @@
     </main>
 
 
-    <!-- ここらかscript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+    <script src="../firebase.js"></script>
+    <script>
+
+        //イベント メッセージが追加されたら自動的に表示
+        newPostRef2.on('child_added', function (event_data) {
+            var event_k = event_data.key; //kを指定
+            var event_v = event_data.val(); //vを指定
+
+            var event_str = '';
+            event_str += `<div id=${event_k} class="line_box">`;//必ず必要
+            event_str += `<p>${event_v.event_title}</p>`;//名前を表示する //変数がはいるときだけ``
+            event_str += `<p>${event_v.event_date}</p>`;
+            event_str += `<p>${event_v.event_time}</p>`;
+            event_str += `<p>${event_v.event_place}</p>`;
+            event_str += `<p>${event_v.event_money}</p>`;
+            event_str += `<p>${event_v.event_text}</p>`;
+            event_str += `<input id="remove" type="button" value="キャンセル">`;
+            event_str += '</div>';//必ず必要
+
+            $('#event_output').append(event_str);
+
+        });
+
+
+    </script>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script>
 
 
