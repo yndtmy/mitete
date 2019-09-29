@@ -30,10 +30,10 @@
 
         <form action="profile_thanks.html" method="post">
             <div>
-                <p>名前：<input type="text" name="name"></p>
+                <p>名前：<input id="name" type="text" name="name"></p>
             </div>
             <div>
-                <p>メールアドレス：<input type="mail" name="mail"></p>
+                <p>メールアドレス：<input id="mail" type="mail" name="mail"></p>
             </div>
             <div>
                 <p>電話番号：<input type="tel" name="tel"></p>
@@ -226,7 +226,7 @@
             </div>
 
             <input type="reset" value="リセット">
-            <input type="submit" value="送信する">
+            <input id="user_send" type="submit" value="送信する">
 
         </form>
 
@@ -236,8 +236,17 @@
 
     </main>
 
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
+    <script src="../userLogin.js"></script>
+    <script>
 
-    <!-- ここらかscript -->
+
+
+
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 

@@ -25,9 +25,15 @@
 
     <main>
 
+
+
+
+
         <div>
             <div>
+
                 <div id='event_output' style="cursor:pointer"></div>
+
             </div>
 
             <div>
@@ -59,8 +65,16 @@
             window.location.href = '../main/article.html';
         });
 
+
+
     </script>
     <script>
+
+        // //写真のURLを取得
+        // ref = firebase.storage().ref().child('sample.jpg');
+        // ref.getDownloadURL().then(function (url) {
+        //     document.getElementById('event_image').src = url;
+        // });
 
         //イベント メッセージが追加されたら自動的に表示
         newPostRef2.on('child_added', function (event_data) {
@@ -69,6 +83,7 @@
 
             var event_str = '';
             event_str += `<div id=${event_k} class="line_box">`;//必ず必要
+            event_str += `<div><img id="event_image" class="event_image" src="../img/sample.png" alt=""></div>`
             event_str += `<p>${event_v.event_title}</p>`;//名前を表示する //変数がはいるときだけ``
             event_str += '</div>';//必ず必要
 
@@ -77,10 +92,10 @@
         });
 
 
+
     </script>
 
     <script>
-
 
 
         //コラム メッセージが追加されたら自動的に表示
@@ -90,6 +105,7 @@
 
             var article_str = '';//varに下記3行が入る
             article_str += `<div id=${article_k} class="line_box">`;//必ず必要
+            article_str += `<div><img id="article_image" class="article_image" src="../img/sample.png" alt=""></div>`
             article_str += `<p>${article_v.article_title}</p>`;//名前を表示する //変数がはいるときだけ``
             article_str += '</div>';//必ず必要
 
