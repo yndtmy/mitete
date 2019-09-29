@@ -1,15 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>mitete</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <a href="./user/login.html">ようこそ</a>
+    <header>
+        <div class="header-logo">
+            <p id="logo">mitete</p>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="bg">
+            <div class="bg-mask">
+                <p>DNA FACTORと申します。
+                    遺伝子検査を受けていただきありがとうございました。
+                    その後子育てに少しでも変化を起こせていれば幸いです。</p>
+                <p>このサイトは他では体験できないようなキッズ向けのワークショップイベントのお知らせと、遺伝子に関する子育てコラムを掲載していきます。</p>
+                <p>ご興味のある方はご登録お待ちしております。</p>
+                <input type="button" id="in" value="登録してみる">
+                <p>子どもの能力は無限大！</p>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        // ページの移動
+
+        $("#in").on("click", function () {
+            window.location.href = './user/login.html';
+        });
+
+
+    </script>
 </body>
 
 </html>
