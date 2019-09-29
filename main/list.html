@@ -70,12 +70,6 @@
     </script>
     <script>
 
-        // //写真のURLを取得
-        // ref = firebase.storage().ref().child('sample.jpg');
-        // ref.getDownloadURL().then(function (url) {
-        //     document.getElementById('event_image').src = url;
-        // });
-
         //イベント メッセージが追加されたら自動的に表示
         newPostRef2.on('child_added', function (event_data) {
             var event_k = event_data.key; //kを指定
@@ -92,7 +86,6 @@
         });
 
 
-
     </script>
 
     <script>
@@ -105,7 +98,7 @@
 
             var article_str = '';//varに下記3行が入る
             article_str += `<div id=${article_k} class="line_box">`;//必ず必要
-            article_str += `<div><img id="article_image" class="article_image" src="../img/sample.png" alt=""></div>`
+            article_str += `<div><img id="article_image" class="article_image" src="../img/telomere.png" alt=""></div>`
             article_str += `<p>${article_v.article_title}</p>`;//名前を表示する //変数がはいるときだけ``
             article_str += '</div>';//必ず必要
 
